@@ -28,7 +28,13 @@ function SliderCreate() {
         CreatedBy: createdBy,
     };
     //Prop for api end
+    function base64Img(file) {
+        var base64String = getBase64(file);
+        base64String.then(function (result) {
+            setImage(result)
+        });
 
+    }
     function getBase64(file) {
         return new Promise((resolve, reject) => {
             const reader = new FileReader();
@@ -73,13 +79,6 @@ function SliderCreate() {
 
     };
 
-    function base64Img(file) {
-        var base64String = getBase64(file);
-        base64String.then(function (result) {
-            setImage(result)
-        });
-
-    }
   return (
     <div className='container'>
     <Form onSubmit={(e) => create(e)}>
@@ -92,37 +91,37 @@ function SliderCreate() {
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> MainTitle</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setMainTitle(e.target.value)} />
+            <Form.Control type="text" placeholder="Enter Main Title" onChange={(e) => setMainTitle(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> Subtitle</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setSubtitle(e.target.value)} />
+            <Form.Control type="text" placeholder="Enter SubTitle" onChange={(e) => setSubtitle(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> Link</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setLink(e.target.value)} />
+            <Form.Control type="text" placeholder="Enter Link" onChange={(e) => setLink(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> Price</Form.Label>
-            <Form.Control type="number" placeholder="Enter Brand Name" onChange={(e) => setPrice(e.target.value)} />
+            <Form.Control type="number" placeholder="Enter Price" onChange={(e) => setPrice(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> SaleInfo</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setSaleInfo(e.target.value)} />
+            <Form.Control type="text" placeholder="Enter SaleInfo" onChange={(e) => setSaleInfo(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> SliderType</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setSliderType(e.target.value)} />
+            <Form.Control type="text" placeholder="Enter Slider Type" onChange={(e) => setSliderType(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> CreatedBy</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setCreatedBy(e.target.value)} />
+            <Form.Control type="text" placeholder="Enter User who create this size" onChange={(e) => setCreatedBy(e.target.value)} />
         </Form.Group>
 
         <Button variant="primary" type="submit" className='mt-3' >

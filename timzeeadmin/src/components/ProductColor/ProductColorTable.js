@@ -19,8 +19,8 @@ function ProductColorTable() {
     const loadProductColor = async () => {
 
         const result = await axios.get(`api/ProductColors/GetAllProductColors`)
-        setProductColor(result.data);
-        console.log(result.data);
+        setProductColor(result?.data);
+        console.log(result?.data);
 
     }
 
@@ -71,17 +71,17 @@ function ProductColorTable() {
                         </thead>
                         <tbody>
                             {
-                                productcolor.map((productcol =>
+                                productcolor?.map((productcol =>
 
-                                    <tr key={productcol.id}>
+                                    <tr key={productcol?.id}>
                                         <td>{++count}</td>
                                         <td className="py-1">
-                                            {productcol.product.title}
+                                            {productcol?.product?.title}
                                         </td>
                                         <td className="py-1">
-                                            {productcol.color.colorName}
+                                            {productcol?.color?.colorName}
                                         </td>
-                                        <td><Link to={`/productcolorupdate/${productcol.id}`}  ><button className='btn btn-outline-warning' onClick={() => UpdateProductColor(productcol.id)} ><i className="far fa-edit"></i></button></Link> <button className='btn btn-outline-danger' onClick={() => deleteProductColor(productcol.id)}> <i className="fas fa-trash-alt"></i></button> </td>
+                                        <td><Link to={`/productcolorupdate/${productcol?.id}`}  ><button className='btn btn-outline-warning' onClick={() => UpdateProductColor(productcol.id)} ><i className="far fa-edit"></i></button></Link> <button className='btn btn-outline-danger' onClick={() => deleteProductColor(productcol.id)}> <i className="fas fa-trash-alt"></i></button> </td>
 
                                     </tr>
                                 ))

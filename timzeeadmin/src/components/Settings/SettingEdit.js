@@ -9,12 +9,16 @@ function SettingEdit(props) {
     const [key, setKey] = useState();
     const [value, setValue] = useState();
     const [updatedBy, setupdatedBy] = useState();
-
+    const [isimage, setIsImage] = useState(false);
+    const [valueImage, setValueImage] = useState();
+    const [displayed, setDisplayed] = useState(false);
     
     const bodyParameters = {
-        Key: key,
-        Value: value,
-        UpdatedBy:updatedBy
+      Key: key,
+      Value: value,
+      ValueImage:valueImage,
+        UpdatedBy:updatedBy,
+        IsImage: isimage
     };
 
     async function update(e) {
@@ -64,6 +68,15 @@ function SettingEdit(props) {
         });
 
     }
+    const IsImage = (image) => {
+      setIsImage(image)
+      console.log(value)
+      if (isimage === 'true') {
+          setDisplayed('true');
+      } else {
+          setDisplayed('false');
+      }
+  };
   return (
     <div className='container'>
     {/* <div>
@@ -71,27 +84,41 @@ function SettingEdit(props) {
 
     </div> */}
     <Form onSubmit={(e) => update(e)}>
+    <Form.Label>IsImage</Form.Label>
+                <Form.Select onChange={(e) => IsImage(e.target.value)}>
+                    <option value={'false'}>false</option>
+                    <option value={'true'}>true</option>
 
-    <Form.Group controlId="formFile" className="mb-3">
-            <Form.Label>MainImage</Form.Label>
-            <Form.Control type="file" onChange={(e) => base64Img(e.target.files[0])} />
+                </Form.Select>
+
+                {displayed ? (
+                    <Form.Group controlId="formFile" className="mb-3">
+                        <Form.Label>value</Form.Label>
+                        <Form.Control type="file" onChange={(e) => base64Img(e.target.files[0])} />
+                    </Form.Group>
+                ) : (
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>value</Form.Label>
+                        <Form.Control type="text" placeholder="Enter Value " onChange={(e) => setValue(e.target.value)} />
+                    </Form.Group>
+                )}
+
+
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label> Key</Form.Label>
+            <Form.Control type="text" placeholder="Enter Key" onChange={(e) => setKey(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label> Title</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setKey(e.target.value)} />
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label> Title</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setValue(e.target.value)} />
+            <Form.Label> Value</Form.Label>
+            <Form.Control type="text" placeholder="Enter Value" onChange={(e) => setValue(e.target.value)} />
         </Form.Group>
 
  
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
-<Form.Label>Created By</Form.Label>
-<Form.Control type="text" placeholder="Enter User who create this color" onChange={(e) => setupdatedBy(e.target.value)} />
+<Form.Label>Updated By</Form.Label>
+<Form.Control type="text" placeholder="Enter User who update this setting data" onChange={(e) => setupdatedBy(e.target.value)} />
 </Form.Group>
 
 

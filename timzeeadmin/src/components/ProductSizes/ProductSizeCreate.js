@@ -108,7 +108,7 @@ function ProductSizeCreate() {
                 </div>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Created By</Form.Label>
-                    <Form.Control type="text" placeholder="Enter User who create this color" onChange={(e) => setCreatedby(e.target.value)} />
+                    <Form.Control type="text" placeholder="Enter User who create this ProductSize" onChange={(e) => setCreatedby(e.target.value)} />
                 </Form.Group>
                 <Button variant="primary" type="submit" className='mt-3' >
                     Submit

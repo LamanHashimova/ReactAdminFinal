@@ -167,27 +167,27 @@ function ProductEdit(props) {
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label> Title</Form.Label>
-          <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setTitle(e.target.value)} />
+          <Form.Control type="text" placeholder="Enter Title" onChange={(e) => setTitle(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label> Price</Form.Label>
-          <Form.Control type="number" placeholder="Enter Brand Name" onChange={(e) => setPrice(e.target.value)} />
+          <Form.Control type="number" placeholder="Enter Price" onChange={(e) => setPrice(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label> DiscoundPrice</Form.Label>
-          <Form.Control type="number" placeholder="Enter Brand Name" onChange={(e) => setDiscountPrice(e.target.value)} />
+          <Form.Control type="number" placeholder="Enter Discounted Price" onChange={(e) => setDiscountPrice(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label> Description</Form.Label>
-          <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setDescription(e.target.value)} />
+          <Form.Control type="text" placeholder="Enter Description" onChange={(e) => setDescription(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label> Count</Form.Label>
-          <Form.Control type="number" placeholder="Enter Brand Name" onChange={(e) => setCount(e.target.value)} />
+          <Form.Control type="number" placeholder="Enter Count" onChange={(e) => setCount(e.target.value)} />
         </Form.Group>
 
 
@@ -247,7 +247,7 @@ function ProductEdit(props) {
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label> UpdatedBy</Form.Label>
-          <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setupdatedBy(e.target.value)} />
+          <Form.Control type="text" placeholder="Enter User who update this product" onChange={(e) => setupdatedBy(e.target.value)} />
         </Form.Group>
 
 

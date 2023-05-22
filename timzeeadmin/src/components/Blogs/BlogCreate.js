@@ -86,16 +86,16 @@ function BlogCreate() {
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> Title</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setTitle(e.target.value)} defaultValue={title}/>
+            <Form.Control type="text" placeholder="Enter Blog Title" onChange={(e) => setTitle(e.target.value)} defaultValue={title}/>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> Description</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setDescription(e.target.value)}  />
+            <Form.Control type="text" placeholder="Enter Blog Description" onChange={(e) => setDescription(e.target.value)}  />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Created By</Form.Label>
-        <Form.Control type="text" placeholder="Enter User who create this color" onChange={(e) => setCreatedby(e.target.value)} />
+        <Form.Control type="text" placeholder="Enter User who create this blog" onChange={(e) => setCreatedby(e.target.value)} />
       </Form.Group>
         <Button variant="primary" type="submit" className='mt-3' >
             Submit

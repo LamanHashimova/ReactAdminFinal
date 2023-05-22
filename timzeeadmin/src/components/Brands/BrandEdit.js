@@ -93,7 +93,7 @@ function BrandEdit(props) {
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label> UpdatedBy</Form.Label>
-          <Form.Control type="text" onChange={(e) => setupdatedBy(e.target.value)}  />
+          <Form.Control placeholder="Enter User who update this brand" type="text" onChange={(e) => setupdatedBy(e.target.value)}  />
         </Form.Group>
         <Button variant="primary" type="submit" className='mt-3' >
           Submit

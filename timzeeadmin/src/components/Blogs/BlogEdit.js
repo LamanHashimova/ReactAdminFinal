@@ -88,18 +88,18 @@ function BlogEdit(props) {
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label> Title</Form.Label>
-          <Form.Control type="text"  onChange={(e) => setTitle(e.target.value)} defaultValue={title}  />
+          <Form.Control type="text" placeholder="Enter Title" onChange={(e) => setTitle(e.target.value)} defaultValue={title}  />
         </Form.Group>
 
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label> Description</Form.Label>
-          <Form.Control type="text"  onChange={(e) => setDescription(e.target.value)} defaultValue={description} />
+          <Form.Control type="text" placeholder="Enter Description" onChange={(e) => setDescription(e.target.value)} defaultValue={description} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label> UpdatedBy</Form.Label>
-          <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setupdatedBy(e.target.value)} />
+          <Form.Control type="text" placeholder="Enter User who update this blog" onChange={(e) => setupdatedBy(e.target.value)} />
         </Form.Group>
 
         <Button variant="primary" type="submit" className='mt-3' >

@@ -95,43 +95,43 @@ function TeamEdit() {
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> Name</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setName(e.target.value)} />
+            <Form.Control type="text" placeholder="Enter Name" onChange={(e) => setName(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> Surname</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setSurname(e.target.value)} />
+            <Form.Control type="text" placeholder="Enter SurName" onChange={(e) => setSurname(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> Position</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setPosition(e.target.value)} />
+            <Form.Control type="text" placeholder="Enter Position" onChange={(e) => setPosition(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> FacebookLink</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setFacebookLink(e.target.value)} />
+            <Form.Control type="text" placeholder="Enter Facebook address" onChange={(e) => setFacebookLink(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> TwitterLink</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setTwitterLink(e.target.value)} />
+            <Form.Control type="text" placeholder="Enter Twitter address" onChange={(e) => setTwitterLink(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> PinterestLink</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setPinterestLink(e.target.value)} />
+            <Form.Control type="text" placeholder="Enter Pinterest address" onChange={(e) => setPinterestLink(e.target.value)} />
         </Form.Group>
 
 
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label> YoutubeLink</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setYoutubeLink(e.target.value)} />
+        <Form.Group className="mb-3" controlId="formBasicEmail" >
+            <Form.Label > YoutubeLink</Form.Label >
+            <Form.Control type="text" placeholder="Enter Youtube channel" onChange={(e) => setYoutubeLink(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> UpdatedBy</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setupdatedBy(e.target.value)} />
+            <Form.Control type="text" placeholder="Enter User who update this team" onChange={(e) => setupdatedBy(e.target.value)} />
         </Form.Group>
 
 

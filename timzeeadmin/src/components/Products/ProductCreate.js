@@ -14,6 +14,7 @@ function ProductCreate() {
     const [brandId, setBrandId] = useState();
     const [categoryId, setCategoryId] = useState();
     const [createdby, setCreatedby] = useState();
+    const [typeId, setTypeId] = useState();
     const [isPopular, setIsPopular] = useState(false);
     const [isBestSeller, setIsBestSeller] = useState(false);
     const [isNewArrival, setIsNewArrival] = useState(false);
@@ -22,6 +23,7 @@ function ProductCreate() {
 
     const [categories, setCategories] = useState();
     const [brands, setBrands] = useState();
+    const [type, setType] = useState();
 
 
     const bodyParameters = {
@@ -36,7 +38,8 @@ function ProductCreate() {
         IsPopular: isPopular,
         IsNewArrival: isNewArrival,
         IsBestSeller: isBestSeller,
-        CreatedBy:createdby
+        CreatedBy:createdby,
+        TypeId:typeId
     };
     //Prop for api end
 
@@ -52,9 +55,12 @@ function ProductCreate() {
 
     const loadCategory = async () => {
         const resultcategory = await axios.get("api/Categories/GetAllCategories");
-        setCategories(resultcategory.data);
+        setCategories(resultcategory?.data);
     }
-
+    const loadTypes = async () => {
+        const resultype = await axios.get("api/Types/GetAllTypes");
+        setType(resultype?.data);
+    }
     const loadBrand = async () => {
         const resultbrands = await axios.get("api/Brands/GetAllBrands");
         setBrands(resultbrands.data);
@@ -106,7 +112,9 @@ function ProductCreate() {
     const changeCategory = (categ) => {
         setCategoryId(categ)
     }
-
+    const changeType = (type) => {
+        setTypeId(type)
+    }
     const changeBrand = (brand) => {
         setBrandId(brand)
 
@@ -146,7 +154,7 @@ function ProductCreate() {
     useEffect(() => {
 
         loadCategory();
-
+        loadTypes();
         loadBrand();
 
     }, []);
@@ -162,27 +170,27 @@ function ProductCreate() {
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label> Title</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setTitle(e.target.value)} />
+                    <Form.Control type="text" placeholder="Enter Title" onChange={(e) => setTitle(e.target.value)} />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label> Price</Form.Label>
-                    <Form.Control type="number" placeholder="Enter Brand Name" onChange={(e) => setPrice(e.target.value)} />
+                    <Form.Control type="number" placeholder="Enter Price" onChange={(e) => setPrice(e.target.value)} />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label> DiscoundPrice</Form.Label>
-                    <Form.Control type="number" placeholder="Enter Brand Name" onChange={(e) => setDiscountPrice(e.target.value)} />
+                    <Form.Control type="number" placeholder="Enter Discounted Price" onChange={(e) => setDiscountPrice(e.target.value)} />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label> Description</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setDescription(e.target.value)} />
+                    <Form.Control type="text" placeholder="Enter Description" onChange={(e) => setDescription(e.target.value)} />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label> Count</Form.Label>
-                    <Form.Control type="number" placeholder="Enter Brand Name" onChange={(e) => setCount(e.target.value)} />
+                    <Form.Control type="number" placeholder="Enter Count" onChange={(e) => setCount(e.target.value)} />
                 </Form.Group>
 
 
@@ -225,6 +233,21 @@ function ProductCreate() {
                     </Form.Select>
                 </div>
                 <div>
+                    <Form.Label> Type</Form.Label>
+                    <Form.Select className='d-block' defaultValue={""} onChange={(e) => changeType(e.target.value)} >
+                        <option value="" disabled hidden
+                        >
+                            Type Seçin
+                        </option>
+                        {
+                            // value={setCategoryİd(categori.id)}
+                            type?.map((type =>
+                                <option key={type.id} value={type.id} >{type?.typeName} </option>
+                            ))
+                        }
+                    </Form.Select>
+                </div>
+                <div>
                     <Form.Label> Brand</Form.Label>
                     <Form.Select className='d-block' defaultValue={""} onChange={(e) => changeBrand(e.target.value)} >
                         <option value="" disabled hidden
@@ -243,7 +266,7 @@ function ProductCreate() {
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Created By</Form.Label>
-        <Form.Control type="text" placeholder="Enter User who create this color" onChange={(e) => setCreatedby(e.target.value)} />
+        <Form.Control type="text" placeholder="Enter User who create this product" onChange={(e) => setCreatedby(e.target.value)} />
       </Form.Group>
 
 

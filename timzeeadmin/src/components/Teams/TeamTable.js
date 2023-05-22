@@ -68,10 +68,7 @@ function TeamTable() {
                         <th>  Name </th>
                         <th>  Surname </th>
                         <th>  Position </th>
-                        <th>  FacebookLink </th>
-                        <th>  TwitterLink </th>
-                        <th>  PinterestLink </th>
-                        <th>  YoutubeLink </th>
+                      
 
 
 
@@ -87,7 +84,7 @@ function TeamTable() {
                             <tr key={team.id}>
                                 <td>{++count}</td>
                                 <td className="py-1 ">
-                                            <img style={{width:'100px', height:'70px',borderRadius:'unset'}} src={`data:image/jpeg;base64,${team.image}`} />
+                                            <img style={{width:'100px', height:'120px',borderRadius:'unset'}} src={`data:image/jpeg;base64,${team.image}`} />
                                           
                                         </td>
                                 <td className="py-1">
@@ -99,18 +96,9 @@ function TeamTable() {
                                 <td className="py-1">
                                     {team.position}
                                 </td>
-                                <td className="py-1">
-                                    {team.facebookLink}
-                                </td>
-                                <td className="py-1">
-                                    {team.twitterLink}
-                                </td>
-                                <td className="py-1">
-                                    {team.pinterestLink}
-                                </td>
-                                <td className="py-1">
-                                    {team.youtubeLink}
-                                </td>
+                                
+                               
+                               
                               
                                 <td><Link to={`/teamupdate/${team.id}`}  ><button className='btn btn-outline-warning' onClick={() => UpdateTeam(team.id)} ><i className="far fa-edit"></i></button></Link> <button className='btn btn-outline-danger' onClick={() => deleteTeam(team.id )}> <i className="fas fa-trash-alt"></i></button> </td>
 

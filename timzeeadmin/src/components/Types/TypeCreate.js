@@ -52,11 +52,11 @@ function TypeCreate() {
     <Form onSubmit={(e) => create(e)}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Type Name</Form.Label>
-        <Form.Control type="text" placeholder="Enter Color Name" onChange={(e) => setTypename(e.target.value)} />
+        <Form.Control type="text" placeholder="Enter Type Name" onChange={(e) => setTypename(e.target.value)} />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Created By</Form.Label>
-        <Form.Control type="text" placeholder="Enter User who create this color" onChange={(e) => setCreatedby(e.target.value)} />
+        <Form.Control type="text" placeholder="Enter User who create this type" onChange={(e) => setCreatedby(e.target.value)} />
       </Form.Group>
       <Button variant="primary" type="submit" className='mt-3' >
         Submit

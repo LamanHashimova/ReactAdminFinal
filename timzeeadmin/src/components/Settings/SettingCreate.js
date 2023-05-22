@@ -99,7 +99,7 @@ function SettingCreate() {
                 ) : (
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>value</Form.Label>
-                        <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setValue(e.target.value)} />
+                        <Form.Control type="text" placeholder="Enter Value " onChange={(e) => setValue(e.target.value)} />
                     </Form.Group>
                 )}
 
@@ -107,14 +107,14 @@ function SettingCreate() {
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label> key</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setKey(e.target.value)} />
+                    <Form.Control type="text" placeholder="Enter Key" onChange={(e) => setKey(e.target.value)} />
                 </Form.Group>
 
 
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Created By</Form.Label>
-                    <Form.Control type="text" placeholder="Enter User who create this color" onChange={(e) => setCreatedby(e.target.value)} />
+                    <Form.Control type="text" placeholder="Enter User who create this setting data" onChange={(e) => setCreatedby(e.target.value)} />
                 </Form.Group>
 
 

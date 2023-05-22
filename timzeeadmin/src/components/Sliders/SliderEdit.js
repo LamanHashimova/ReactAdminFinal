@@ -92,37 +92,37 @@ function SliderEdit(props) {
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> MainTitle</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setMainTitle(e.target.value)} />
+            <Form.Control type="text" placeholder="Enter Main Title" onChange={(e) => setMainTitle(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> Subtitle</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setSubtitle(e.target.value)} />
+            <Form.Control type="text" placeholder="Enter SubTitle" onChange={(e) => setSubtitle(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> Link</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setLink(e.target.value)} />
+            <Form.Control type="text" placeholder="Enter Link" onChange={(e) => setLink(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> Price</Form.Label>
-            <Form.Control type="number" placeholder="Enter Brand Name" onChange={(e) => setPrice(e.target.value)} />
+            <Form.Control type="number" placeholder="Enter Price" onChange={(e) => setPrice(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> SaleInfo</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setSaleInfo(e.target.value)} />
+            <Form.Control type="text" placeholder="Enter SaleInfo" onChange={(e) => setSaleInfo(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label> SliderType</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setSliderType(e.target.value)} />
+            <Form.Control type="text" placeholder="Enter Slider Type" onChange={(e) => setSliderType(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label> CreatedBy</Form.Label>
-            <Form.Control type="text" placeholder="Enter Brand Name" onChange={(e) => setupdatedBy(e.target.value)} />
+            <Form.Label> Update By</Form.Label>
+            <Form.Control type="text" placeholder="Enter User who update this size" onChange={(e) => setupdatedBy(e.target.value)} />
         </Form.Group>
 
         <Button variant="primary" type="submit" className='mt-3' >

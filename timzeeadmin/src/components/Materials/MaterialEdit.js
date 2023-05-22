@@ -84,12 +84,12 @@ function MaterialEdit(props) {
 
     <Form onSubmit={(e) => update(e)}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Color Name</Form.Label>
+        <Form.Label>Material Name</Form.Label>
         <Form.Control type="text" onChange={(e) => setnewMaterialName(e.target.value)} defaultValue={materialName} />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Material Name</Form.Label>
-        <Form.Control type="text" onChange={(e) => setupdatedBy(e.target.value)}  />
+        <Form.Label>Updated By</Form.Label>
+        <Form.Control placeholder="Enter User who update this material" type="text" onChange={(e) => setupdatedBy(e.target.value)}  />
       </Form.Group>
       <Button variant="primary" type="submit" className='mt-3' >
         Submit

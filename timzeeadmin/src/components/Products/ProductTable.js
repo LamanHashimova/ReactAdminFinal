@@ -87,7 +87,7 @@ function ProductTable() {
                             <tr key={product.id}>
                                 <td>{++count}</td>
                                 <td className="py-1 ">
-                                            <img style={{width:'100px', height:'70px',borderRadius:'unset'}} src={`data:image/jpeg;base64,${product.mainImage}`} />
+                                            <img style={{width:'100px', height:'120px',borderRadius:'unset'}} src={`data:image/jpeg;base64,${product.mainImage}`} />
                                           
                                         </td>
                                 <td className="py-1">

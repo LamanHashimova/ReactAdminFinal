@@ -8,7 +8,7 @@ function BlogTable() {
     let count = 0;
 
     const [blogs, setBlogs] = useState([]);
-
+debugger
     useEffect(() => {
         loadBlogs();
     }, []);
@@ -17,7 +17,7 @@ function BlogTable() {
 
         const result = await axios.get(`api/Blogs/GetAllBlogs`)
         console.log(result);
-        setBlogs(result.data);
+        setBlogs(result?.data);
        
         
     }
@@ -62,28 +62,26 @@ function BlogTable() {
                         <th>#</th>
                         <th> Main Image </th>
                         <th>  Title </th>
-                        <th>  Description </th>
+                      
                         <th> Settings </th>
                     </tr>
                 </thead>
                 <tbody>
                     {
-                       blogs.map((blog => 
+                       blogs?.map((blog => 
 
-                            <tr key={blog.id}>
+                            <tr key={blog?.id}>
                                 <td>{++count}</td>
                                 <td className="py-1 ">
-                                            <img style={{width:'100px', height:'70px',borderRadius:'unset'}} src={`data:image/jpeg;base64,${blog.image}`} />
+                                            <img style={{width:'100px', height:'70px',borderRadius:'unset'}} src={`data:image/jpeg;base64,${blog?.image}`} />
                                           
                                         </td>
                                 <td className="py-1">
-                                    {blog.title}
-                                </td>
-                                <td className="py-1">
-                                    {blog.description}
+                                    {blog?.title}
                                 </td>
                               
-                                <td><Link to={`/blogupdate/${blog.id}`}  ><button className='btn btn-outline-warning' onClick={() => UpdateBlog(blog.id)} ><i className="far fa-edit"></i></button></Link> <button className='btn btn-outline-danger' onClick={() => deleteBlogs(blog.id )}> <i className="fas fa-trash-alt"></i></button> </td>
+                              
+                                <td><Link to={`/blogupdate/${blog?.id}`}  ><button className='btn btn-outline-warning' onClick={() => UpdateBlog(blog?.id)} ><i className="far fa-edit"></i></button></Link> <button className='btn btn-outline-danger' onClick={() => deleteBlogs(blog?.id )}> <i className="fas fa-trash-alt"></i></button> </td>
                             </tr>
                         ))
 
