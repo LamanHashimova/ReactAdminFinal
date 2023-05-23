@@ -27,7 +27,7 @@ function TypeEdit() {
   
   
     function initPromise() {
-      const response = axios.get(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Types/GetType/${id}`)
+      const response = axios.get(`http://localhost:44330/api/Types/GetType/${id}`)
       
       return new Promise(function (res, rej) {
         res(response);
@@ -39,7 +39,7 @@ function TypeEdit() {
   
       e.preventDefault();
    
-      await axios.put(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Types/UpdateTypes/${id}`,
+      await axios.put(`http://localhost:44330/api/Types/UpdateTypes/${id}`,
         bodyParameters,
         // config
       )

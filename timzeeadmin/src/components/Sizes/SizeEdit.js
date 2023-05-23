@@ -27,7 +27,7 @@ function SizeEdit(props) {
   
   
     function initPromise() {
-      const response = axios.get(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Sizes/GetSize/${id}`)
+      const response = axios.get(`http://localhost:44330/api/Sizes/GetSize/${id}`)
       
       return new Promise(function (res, rej) {
         res(response);
@@ -39,7 +39,7 @@ function SizeEdit(props) {
   
       e.preventDefault();
    
-      await axios.put(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Sizes/UpdateSize/${id}`,
+      await axios.put(`http://localhost:44330/api/Sizes/UpdateSize/${id}`,
         bodyParameters,
         // config
       )

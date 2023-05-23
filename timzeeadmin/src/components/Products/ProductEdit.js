@@ -30,7 +30,7 @@ function ProductEdit(props) {
 
 
   // function initPromise() {
-  //   const response = axios.get(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Products/GetProduct/${id}`)
+  //   const response = axios.get(`http://localhost:44330/api/Products/GetProduct/${id}`)
 
   //   return new Promise(function (res, rej) {
   //     res(response);
@@ -51,12 +51,12 @@ function ProductEdit(props) {
   }
 
   const loadCategory = async () => {
-    const resultcategory = await axios.get("http://lamanhashimovaa-001-site1.ctempurl.com/api/Categories/GetAllCategories");
+    const resultcategory = await axios.get("http://localhost:44330/api/Categories/GetAllCategories");
     setCategories(resultcategory.data);
   }
 
   const loadBrand = async () => {
-    const resultbrands = await axios.get("http://lamanhashimovaa-001-site1.ctempurl.com/api/Brands/GetAllBrands");
+    const resultbrands = await axios.get("http://localhost:44330/api/Brands/GetAllBrands");
     setBrands(resultbrands.data);
   }
 
@@ -101,7 +101,7 @@ function ProductEdit(props) {
   async function update(e) {
     e.preventDefault();
    
-    await axios.put(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Products/UpdateProduct/${id}`,
+    await axios.put(`http://localhost:44330/api/Products/UpdateProduct/${id}`,
       bodyParameters
       
     )
