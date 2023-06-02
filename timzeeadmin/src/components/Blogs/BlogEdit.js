@@ -45,7 +45,7 @@ function BlogEdit(props) {
     async function update(e) {
       e.preventDefault();
      
-      await axios.put(`https://localhost:44330/api/Blogs/UpdateBlog/${id}`,
+      await axios.put(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Blogs/UpdateBlog/${id}`,
         bodyParameters
         
       )

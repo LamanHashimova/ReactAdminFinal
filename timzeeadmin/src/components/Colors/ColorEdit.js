@@ -27,7 +27,7 @@ function ColorEdit(props) {
   
   
     function initPromise() {
-      const response = axios.get(`https://localhost:44330/api/Colors/GetColor/${id}`)
+      const response = axios.get(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Colors/GetColor/${id}`)
       
       return new Promise(function (res, rej) {
         res(response);
@@ -39,7 +39,7 @@ function ColorEdit(props) {
   
       e.preventDefault();
    
-      await axios.put(`https://localhost:44330/api/Colors/UpdateColor/${id}`,
+      await axios.put(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Colors/UpdateColor/${id}`,
         bodyParameters,
         // config
       )

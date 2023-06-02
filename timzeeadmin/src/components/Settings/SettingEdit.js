@@ -24,7 +24,7 @@ function SettingEdit(props) {
     async function update(e) {
         e.preventDefault();
        
-        await axios.put(`https://localhost:44330/api/Settings/UpdateSetting/${id}`,
+        await axios.put(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Settings/UpdateSetting/${id}`,
           bodyParameters
           
         )
