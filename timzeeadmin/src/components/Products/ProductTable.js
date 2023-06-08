@@ -19,7 +19,7 @@ function ProductTable() {
 
     const loadProduct = async () => {
 
-        const result = await axios.get(`api/Products/GetAllProducts`)
+        const result = await axios.get(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Products/GetAllProducts`)
         console.log(result);
         setProducts(result.data);
        
@@ -29,7 +29,7 @@ function ProductTable() {
 
     const deleteProduct = async (id) => {
     debugger
-        await axios.delete(`api/Products/${id}`)
+        await axios.delete(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Products/${id}`)
         .then(function (response) {
 
             Swal.fire(

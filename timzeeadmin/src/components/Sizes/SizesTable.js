@@ -18,7 +18,7 @@ function Sizestable() {
 
     const loadSize = async () => {
 
-        const result = await axios.get(`api/Sizes/GetAllSizes`)
+        const result = await axios.get(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Sizes/GetAllSizes`)
         setSizes(result.data);
         console.log(result.data);
 
@@ -27,7 +27,7 @@ function Sizestable() {
 
     const deleteSize = async (id) => {
     debugger
-        await axios.delete(`api/Sizes/DeleteSize/${id}`)
+        await axios.delete(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Sizes/DeleteSize/${id}`)
         .then(function (response) {
 
             Swal.fire(

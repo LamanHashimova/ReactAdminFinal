@@ -21,7 +21,7 @@ function TypeCreate() {
     async function create(e) {
       e.preventDefault();
   
-      await axios.post('api/Types/CreateType',
+      await axios.post('http://lamanhashimovaa-001-site1.ctempurl.com/api/Types/CreateType',
         bodyParameters
         // config
       )

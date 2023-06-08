@@ -18,7 +18,7 @@ function ProductMaterialTable() {
 
     const loadProductMaterial = async () => {
 
-        const result = await axios.get(`api/ProductMaterials/GetAllProductMaterials`)
+        const result = await axios.get(`http://lamanhashimovaa-001-site1.ctempurl.com/api/ProductMaterials/GetAllProductMaterials`)
         setProductMaterial(result.data);
         console.log(result.data);
 
@@ -27,7 +27,7 @@ function ProductMaterialTable() {
 
     const deleteProductMaterial = async (id) => {
         debugger
-        await axios.delete(`api/ProductMaterials/DeleteProductMaterial/${id}`)
+        await axios.delete(`http://lamanhashimovaa-001-site1.ctempurl.com/api/ProductMaterials/DeleteProductMaterial/${id}`)
             .then(function (response) {
 
                 Swal.fire(

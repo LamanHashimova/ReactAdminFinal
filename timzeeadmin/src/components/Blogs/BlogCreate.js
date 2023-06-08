@@ -33,7 +33,7 @@ function BlogCreate() {
     async function create(e) {
         e.preventDefault();
    
-        await axios.post(`api/Blogs/CreateBlog` ,
+        await axios.post(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Blogs/CreateBlog` ,
         bodyParameters   
     ,{
         headers: {

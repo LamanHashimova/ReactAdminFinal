@@ -24,7 +24,7 @@ function SettingCreate() {
     async function create(e) {
         e.preventDefault();
         debugger
-        await axios.post(`api/Settings/CreateSetting`,
+        await axios.post(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Settings/CreateSetting`,
             bodyParameters
             // , {
             //     headers: {

@@ -20,7 +20,7 @@ function BrandsTable() {
 
     const loadBrand = async () => {
 
-        const result = await axios.get(`api/Brands/GetAllBrands`)
+        const result = await axios.get(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Brands/GetAllBrands`)
         setBrands(result.data);
         console.log(result.data);
 
@@ -29,7 +29,7 @@ function BrandsTable() {
 
     const deleteBrand = async (id) => {
     debugger
-        await axios.delete(`api/Brands/DeleteBrand/${id}`)
+        await axios.delete(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Brands/DeleteBrand/${id}`)
         .then(function (response) {
 
             Swal.fire(

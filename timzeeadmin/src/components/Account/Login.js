@@ -25,7 +25,7 @@ function Login(props) {
       };
   
       e.preventDefault();
-      await axios.post(`api/Auth/Login`, {
+      await axios.post(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Auth/Login`, {
         Email: email,
         Password: password
       }, { 'Content-Type': 'multipart/form-data' })

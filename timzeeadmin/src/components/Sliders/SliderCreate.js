@@ -48,7 +48,7 @@ function SliderCreate() {
     async function create(e) {
         e.preventDefault();
    
-        await axios.post(`api/Sliders/CreateSlider` ,
+        await axios.post(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Sliders/CreateSlider` ,
         bodyParameters   
     ,{
         headers: {

@@ -15,7 +15,7 @@ debugger
 
     const loadBlogs = async () => {
 
-        const result = await axios.get(`api/Blogs/GetAllBlogs`)
+        const result = await axios.get(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Blogs/GetAllBlogs`)
         console.log(result);
         setBlogs(result?.data);
        

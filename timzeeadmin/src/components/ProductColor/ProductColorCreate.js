@@ -20,12 +20,12 @@ function ProductColorCreate() {
     };
 
     const loadProducts = async () => {
-        const resultproducts = await axios.get("api/Products/GetAllProducts");
+        const resultproducts = await axios.get("http://lamanhashimovaa-001-site1.ctempurl.com/api/Products/GetAllProducts");
         setProducts(resultproducts.data);
     }
 
     const loadColors = async () => {
-        const resultcolors = await axios.get("api/Colors/GetAllColors");
+        const resultcolors = await axios.get("http://lamanhashimovaa-001-site1.ctempurl.com/api/Colors/GetAllColors");
         setColors(resultcolors.data);
     }
 
@@ -39,7 +39,7 @@ function ProductColorCreate() {
    
     async function create(e) {
         e.preventDefault();
-        await axios.post(`api/ProductColors/CreateProductColor`,
+        await axios.post(`http://lamanhashimovaa-001-site1.ctempurl.com/api/ProductColors/CreateProductColor`,
             bodyParameters
            
         )

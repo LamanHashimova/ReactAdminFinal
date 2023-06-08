@@ -18,7 +18,7 @@ function TypeTable() {
 
     const loadType = async () => {
 
-        const result = await axios.get(`api/Types/GetAllTypes`)
+        const result = await axios.get(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Types/GetAllTypes`)
         setTypes(result.data);
         console.log(result.data);
 
@@ -27,7 +27,7 @@ function TypeTable() {
 
     const deleteType = async (id) => {
     debugger
-        await axios.delete(`api/Types/DeleteType/${id}`)
+        await axios.delete(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Types/DeleteType/${id}`)
         .then(function (response) {
 
             Swal.fire(

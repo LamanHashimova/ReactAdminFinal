@@ -21,7 +21,7 @@ function MaterialCreate() {
     async function create(e) {
       e.preventDefault();
   
-      await axios.post('api/Materials/CreateMaterial',
+      await axios.post('http://lamanhashimovaa-001-site1.ctempurl.com/api/Materials/CreateMaterial',
         bodyParameters
         // config
       )

@@ -20,7 +20,7 @@ function ColorsTable() {
 
     const loadColor = async () => {
 
-        const result = await axios.get(`api/Colors/GetAllColors`)
+        const result = await axios.get(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Colors/GetAllColors`)
         setColors(result.data);
         console.log(result.data);
 
@@ -29,7 +29,7 @@ function ColorsTable() {
 
     const deleteColor = async (id) => {
     debugger
-        await axios.delete(`api/Colors/DeleteColor/${id}`)
+        await axios.delete(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Colors/DeleteColor/${id}`)
         .then(function (response) {
 
             Swal.fire(

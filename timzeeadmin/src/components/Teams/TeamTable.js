@@ -19,7 +19,7 @@ function TeamTable() {
 
     const loadTeam = async () => {
 
-        const result = await axios.get(`api/Teams/GetAllTeams`)
+        const result = await axios.get(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Teams/GetAllTeams`)
         console.log(result);
         setTeams(result.data);
        
@@ -29,7 +29,7 @@ function TeamTable() {
 
     const deleteTeam = async (id) => {
  
-        await axios.delete(`api/Teams/DeleteTeam/${id}`)
+        await axios.delete(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Teams/DeleteTeam/${id}`)
         .then(function (response) {
 
             Swal.fire(

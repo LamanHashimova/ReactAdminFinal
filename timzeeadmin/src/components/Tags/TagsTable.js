@@ -18,7 +18,7 @@ function TagsTable() {
 
     const loadTag = async () => {
 
-        const result = await axios.get(`api/Tags/GetAllTags`)
+        const result = await axios.get(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Tags/GetAllTags`)
         setTags(result.data);
         console.log(result.data);
 
@@ -27,7 +27,7 @@ function TagsTable() {
 
     const deleteTag = async (id) => {
     debugger
-        await axios.delete(`api/Tags/DeleteTag/${id}`)
+        await axios.delete(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Tags/DeleteTag/${id}`)
         .then(function (response) {
 
             Swal.fire(
