@@ -44,7 +44,7 @@ function TeamCreate() {
     async function create(e) {
         e.preventDefault();
 
-        await axios.post(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Teams/CreateTeam` ,
+        await axios.post(`https://timzeeback.azurewebsites.net/api/Teams/CreateTeam` ,
         bodyParameters   
     ,{
         headers: {

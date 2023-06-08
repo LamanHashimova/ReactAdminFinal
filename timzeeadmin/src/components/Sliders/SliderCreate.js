@@ -48,7 +48,7 @@ function SliderCreate() {
     async function create(e) {
         e.preventDefault();
    
-        await axios.post(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Sliders/CreateSlider` ,
+        await axios.post(`https://timzeeback.azurewebsites.net/api/Sliders/CreateSlider` ,
         bodyParameters   
     ,{
         headers: {

@@ -18,7 +18,7 @@ function MaterialsTable() {
 
     const loadMaterial = async () => {
 
-        const result = await axios.get(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Materials/GetAllMaterials`)
+        const result = await axios.get(`https://timzeeback.azurewebsites.net/api/Materials/GetAllMaterials`)
         setMaterials(result.data);
         console.log(result.data);
 
@@ -27,7 +27,7 @@ function MaterialsTable() {
 
     const deleteMaterial = async (id) => {
     debugger
-        await axios.delete(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Materials/DeleteMaterial/${id}`)
+        await axios.delete(`https://timzeeback.azurewebsites.net/api/Materials/DeleteMaterial/${id}`)
         .then(function (response) {
 
             Swal.fire(

@@ -19,7 +19,7 @@ function ProductSizeTable() {
 
     const loadProductSize = async () => {
 
-        const result = await axios.get(`http://lamanhashimovaa-001-site1.ctempurl.com/api/ProductSizes/GetAllProductSizes`)
+        const result = await axios.get(`https://timzeeback.azurewebsites.net/api/ProductSizes/GetAllProductSizes`)
         setProductSize(result.data);
         console.log(result.data);
 
@@ -28,7 +28,7 @@ function ProductSizeTable() {
 
     const deleteProductSize = async (id) => {
         debugger
-        await axios.delete(`http://lamanhashimovaa-001-site1.ctempurl.com/api/ProductSizes/DeleteProductSize/${id}`)
+        await axios.delete(`https://timzeeback.azurewebsites.net/api/ProductSizes/DeleteProductSize/${id}`)
             .then(function (response) {
 
                 Swal.fire(

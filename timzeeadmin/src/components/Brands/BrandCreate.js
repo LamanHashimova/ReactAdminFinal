@@ -22,7 +22,7 @@ function BrandCreate() {
   async function create(e) {
     e.preventDefault();
 
-    await axios.post('http://lamanhashimovaa-001-site1.ctempurl.com/api/Brands/CreateBrand',
+    await axios.post('https://timzeeback.azurewebsites.net/api/Brands/CreateBrand',
       bodyParameters
       // config
     )

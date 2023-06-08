@@ -15,7 +15,7 @@ function SliderTable() {
 
     const loadSliders = async () => {
 
-        const result = await axios.get(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Sliders/GetAllSliders`)
+        const result = await axios.get(`https://timzeeback.azurewebsites.net/api/Sliders/GetAllSliders`)
         console.log(result);
         setSliders(result.data);
        
@@ -25,7 +25,7 @@ function SliderTable() {
 
     const deleteSlider = async (id) => {
     debugger
-        await axios.delete(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Sliders/${id}`)
+        await axios.delete(`https://timzeeback.azurewebsites.net/api/Sliders/${id}`)
         .then(function (response) {
 
             Swal.fire(

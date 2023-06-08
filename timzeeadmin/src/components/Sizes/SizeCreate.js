@@ -21,7 +21,7 @@ function SizeCreate() {
     async function create(e) {
       e.preventDefault();
   
-      await axios.post('http://lamanhashimovaa-001-site1.ctempurl.com/api/Sizes/CreateSize',
+      await axios.post('https://timzeeback.azurewebsites.net/api/Sizes/CreateSize',
         bodyParameters
         // config
       )

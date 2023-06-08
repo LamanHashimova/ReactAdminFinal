@@ -22,7 +22,7 @@ function TagCreate() {
     async function create(e) {
       e.preventDefault();
   
-      await axios.post('http://lamanhashimovaa-001-site1.ctempurl.com/api/Tags/CreateTag',
+      await axios.post('https://timzeeback.azurewebsites.net/api/Tags/CreateTag',
         bodyParameters
         // config
       )

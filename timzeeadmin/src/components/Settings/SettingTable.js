@@ -19,7 +19,7 @@ function SettingTable() {
 
     const loadSetting = async () => {
 
-        const result = await axios.get(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Settings/GetAllSettings`)
+        const result = await axios.get(`https://timzeeback.azurewebsites.net/api/Settings/GetAllSettings`)
         console.log(result);
         setSettings(result.data);
 
@@ -29,7 +29,7 @@ function SettingTable() {
 
     const deleteSetting = async (id) => {
         debugger
-        await axios.delete(`http://lamanhashimovaa-001-site1.ctempurl.com/api/Settings/${id}`)
+        await axios.delete(`https://timzeeback.azurewebsites.net/api/Settings/${id}`)
             .then(function (response) {
 
                 Swal.fire(

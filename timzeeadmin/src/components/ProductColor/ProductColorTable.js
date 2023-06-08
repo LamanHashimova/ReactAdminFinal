@@ -18,7 +18,7 @@ function ProductColorTable() {
 
     const loadProductColor = async () => {
 
-        const result = await axios.get(`http://lamanhashimovaa-001-site1.ctempurl.com/api/ProductColors/GetAllProductColors`)
+        const result = await axios.get(`https://timzeeback.azurewebsites.net/api/ProductColors/GetAllProductColors`)
         setProductColor(result?.data);
         console.log(result?.data);
 
@@ -27,7 +27,7 @@ function ProductColorTable() {
 
     const deleteProductColor = async (id) => {
         debugger
-        await axios.delete(`http://lamanhashimovaa-001-site1.ctempurl.com/api/ProductColors/DeleteProductColor/${id}`)
+        await axios.delete(`https://timzeeback.azurewebsites.net/api/ProductColors/DeleteProductColor/${id}`)
             .then(function (response) {
 
                 Swal.fire(

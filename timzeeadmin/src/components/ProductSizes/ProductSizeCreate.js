@@ -19,12 +19,12 @@ function ProductSizeCreate() {
     };
 
     const loadProducts = async () => {
-        const resultproducts = await axios.get("http://lamanhashimovaa-001-site1.ctempurl.com/api/Products/GetAllProducts");
+        const resultproducts = await axios.get("https://timzeeback.azurewebsites.net/api/Products/GetAllProducts");
         setProducts(resultproducts.data);
     }
 
     const loadSizes = async () => {
-        const resultsizes = await axios.get("http://lamanhashimovaa-001-site1.ctempurl.com/api/Sizes/GetAllSizes");
+        const resultsizes = await axios.get("https://timzeeback.azurewebsites.net/api/Sizes/GetAllSizes");
         setSizes(resultsizes.data);
     }
 
@@ -39,7 +39,7 @@ function ProductSizeCreate() {
 
     async function create(e) {
         e.preventDefault();
-        await axios.post(`http://lamanhashimovaa-001-site1.ctempurl.com/api/ProductSizes/CreateProductSize`,
+        await axios.post(`https://timzeeback.azurewebsites.net/api/ProductSizes/CreateProductSize`,
             bodyParameters
            
         )
