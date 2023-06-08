@@ -80,7 +80,7 @@ function Login(props) {
                         <div className="d-table-cell align-middle">
 
                             <div className="text-center mt-4">
-                                <h1 className="h2">Welcome back, Charles</h1>
+                                <h1 className="h2">Welcome back</h1>
                                 <p className="lead">
                                     Sign in to your account to continue
                                 </p>

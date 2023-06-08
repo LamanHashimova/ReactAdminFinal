@@ -11,11 +11,11 @@ function Sidebar() {
                 <ul className="sidebar-nav">
 
                 <li className="sidebar-item active">
-                        <Link className="sidebar-link" to={'/brands'}>
-                            <i className="align-middle" data-feather="sliders"></i> <span className="align-middle">Brand</span>
+                        <Link className="sidebar-link" to={'/dashboard'}>
+                            <i className="align-middle" data-feather="sliders"></i> <span className="align-middle">Dashboard</span>
                         </Link>
                     </li>
-                    <li className="sidebar-item active">
+                    <li className="sidebar-item ">
                         <Link className="sidebar-link" to={'/brands'}>
                             <i className="align-middle" data-feather="sliders"></i> <span className="align-middle">Brand</span>
                         </Link>

@@ -17,6 +17,8 @@ import Tags from './components/Tags/TagsTable.js';
 import TagCreate from './components/Tags/TagCreate.js';
 import TagEdit from './components/Tags/TagEdit.js';
 
+import Dashboard from './components/Dashboard/Dashboard.js';
+
 import Materials from './components/Materials/MaterialsTable.js';
 import MaterialCreate from './components/Materials/MaterialCreate.js';
 import MaterialEdit from './components/Materials/MaterialEdit.js';
@@ -105,7 +107,7 @@ function App() {
             <Route path="/brandcreate" element={<BrandCreate />} />
             <Route path="/brandupdate/:id" element={<BrandEdit />} />
 
-
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/colors" element={<Colors />} />
             <Route path="/colorcreate" element={<ColorCreate />} />
             <Route path="/colorupdate/:id" element={<ColorEdit />} />
