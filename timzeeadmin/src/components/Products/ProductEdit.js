@@ -101,7 +101,7 @@ function ProductEdit(props) {
   async function update(e) {
     e.preventDefault();
    
-    await axios.put(`http://localhost:44330/api/Products/UpdateProduct/${id}`,
+    await axios.put(`https://timzeeback.azurewebsites.net/api/Products/UpdateProduct/${id}`,
       bodyParameters
       
     )

@@ -55,7 +55,7 @@ function TeamEdit() {
     async function update(e) {
       e.preventDefault();
      
-      await axios.put(`http://localhost:44330/api/Teams/UpdateTeam/${id}`,
+      await axios.put(`https://timzeeback.azurewebsites.net/api/Teams/UpdateTeam/${id}`,
         bodyParameters
         
       )

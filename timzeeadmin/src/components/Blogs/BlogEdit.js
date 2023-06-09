@@ -45,7 +45,7 @@ function BlogEdit(props) {
     async function update(e) {
       e.preventDefault();
      
-      await axios.put(`http://localhost:44330/api/Blogs/UpdateBlog/${id}`,
+      await axios.put(`https://timzeeback.azurewebsites.net/api/Blogs/UpdateBlog/${id}`,
         bodyParameters
         
       )

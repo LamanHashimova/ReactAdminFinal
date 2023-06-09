@@ -28,7 +28,7 @@ function MaterialEdit(props) {
   
   
     function initPromise() {
-      const response = axios.get(`http://localhost:44330/api/Materials/GetMaterial/${id}`)
+      const response = axios.get(`https://timzeeback.azurewebsites.net/api/Materials/GetMaterial/${id}`)
       
       return new Promise(function (res, rej) {
         res(response);
@@ -40,7 +40,7 @@ function MaterialEdit(props) {
   
       e.preventDefault();
    
-      await axios.put(`http://localhost:44330/api/Materials/UpdateMaterial/${id}`,
+      await axios.put(`https://timzeeback.azurewebsites.net/api/Materials/UpdateMaterial/${id}`,
         bodyParameters,
         // config
       )

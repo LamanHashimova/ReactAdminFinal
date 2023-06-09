@@ -24,7 +24,7 @@ function SettingEdit(props) {
     async function update(e) {
         e.preventDefault();
        
-        await axios.put(`http://localhost:44330/api/Settings/UpdateSetting/${id}`,
+        await axios.put(`https://timzeeback.azurewebsites.net/api/Settings/UpdateSetting/${id}`,
           bodyParameters
           
         )

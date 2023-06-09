@@ -52,7 +52,7 @@ function SliderEdit(props) {
     async function update(e) {
       e.preventDefault();
      
-      await axios.put(`http://localhost:44330/api/Sliders/UpdateSlider/${id}`,
+      await axios.put(`https://timzeeback.azurewebsites.net/api/Sliders/UpdateSlider/${id}`,
         bodyParameters
         
       )

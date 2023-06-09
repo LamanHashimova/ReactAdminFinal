@@ -28,7 +28,7 @@ function BrandEdit(props) {
 
 
   function initPromise() {
-    const response =axios.get(`http://localhost:44330/api/Brands/GetBrand/${id}`)
+    const response =axios.get(`https://timzeeback.azurewebsites.net/api/Brands/GetBrand/${id}`)
     
     return new Promise(function (res, rej) {
       res(response);
@@ -40,7 +40,7 @@ function BrandEdit(props) {
 
     e.preventDefault();
  
-    await axios.put(`http://localhost:44330/api/Brands/UpdateBrand/${id}`,
+    await axios.put(`https://timzeeback.azurewebsites.net/Brands/UpdateBrand/${id}`,
       bodyParameters,
       // config
     )

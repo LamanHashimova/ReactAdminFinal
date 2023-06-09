@@ -27,7 +27,7 @@ function TagEdit(props) {
   
   
     function initPromise() {
-      const response = axios.get(`http://localhost:44330/api/Tags/GetTag/${id}`)
+      const response = axios.get(`https://timzeeback.azurewebsites.net/api/Tags/GetTag/${id}`)
       
       return new Promise(function (res, rej) {
         res(response);
@@ -39,7 +39,7 @@ function TagEdit(props) {
   
       e.preventDefault();
    
-      await axios.put(`http://localhost:44330/api/Tags/UpdateTag/${id}`,
+      await axios.put(`https://timzeeback.azurewebsites.net/api/Tags/UpdateTag/${id}`,
         bodyParameters,
         // config
       )

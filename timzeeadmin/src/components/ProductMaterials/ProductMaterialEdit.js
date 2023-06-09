@@ -19,12 +19,12 @@ function ProductMaterialEdit(props) {
   };
 
   const loadProducts = async () => {
-    const resultproducts = await axios.get("http://localhost:44330/api/Products/GetAllProducts");
+    const resultproducts = await axios.get("https://timzeeback.azurewebsites.net/api/Products/GetAllProducts");
     setProducts(resultproducts.data);
   }
 
   const loadMaterials = async () => {
-    const resultmaterials = await axios.get("http://localhost:44330/api/Materials/GetAllMaterials");
+    const resultmaterials = await axios.get("https://timzeeback.azurewebsites.net/api/Materials/GetAllMaterials");
     setMaterials(resultmaterials.data);
   }
 
@@ -41,7 +41,7 @@ function ProductMaterialEdit(props) {
 
   async function update(e) {
     e.preventDefault();
-    await axios.put(`http://localhost:44330/api/ProductMaterials/UpdateProductMaterial/${id}`,
+    await axios.put(`https://timzeeback.azurewebsites.net/api/ProductMaterials/UpdateProductMaterial/${id}`,
       bodyParameters
       // ,{
       //     headers: {
